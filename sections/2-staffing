@@ -1,0 +1,16 @@
+\documentclass[../main.tex]{subfiles}
+ 
+\begin{document}
+
+\section{Staffing}
+
+Staff for this project currently comprises of only 2 people: the PI, Dr. Aubrey Moore, and a post-doc, Dr. James Grasela. 
+\begin{itemize}
+
+\item Dr. James Grasela, an insect pathologist, has been hired for a term of 2 years with a grant from Department of Interior, Office of Island Affairs.
+
+\item Ian Iriarte, a graduate student and technician working on this project resigned to accept another job. Search for a replacement is under way.
+
+\end{itemize} 
+
+\end{document}
