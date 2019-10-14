@@ -22,9 +22,9 @@
 \usepackage{csquotes}
 \addbibresource{references.bib}
 
-
-
-
+% Prevent page breaks within paragraphs
+% https://tex.stackexchange.com/questions/21983/how-to-avoid-page-breaks-inside-paragraphs
+\widowpenalties 1 10000
 
 \begin{document}
 
@@ -37,23 +37,13 @@ Performance Period: March 1, 2019 - August 31, 2019}
 \maketitle
 
 % The following line provides a link to the source code for this document
-Repository: \url{https://github.com/aubreymoore/FB18-Report-2}
 
-Document: \url{https://github.com/aubreymoore/FB18-Report-2/raw/master/report.pdf}
+\begin{center}
+\url{https://github.com/aubreymoore/FB18-Report-2/raw/master/report.pdf}
+\end{center}
 
 \newpage
 \tableofcontents{}
-
-
-
-
-\newpage
-\section{Summary}
-
-Coming soon!
-
-
-
 
 \newpage
 \section{Background}
@@ -66,7 +56,7 @@ infestations of Pacific islands were readily controlled by classical
 biological control using \textit{Oryctes} nudivirus (OrNV). Following a lack
 of response to release of OrNV on Guam, research showed that the Guam
 CRB population is a genetically distinct virus-resistant biotype which
-has become known as CRB-G\parencite{marshall_new_2017-1}. This biotype is highly invasive and is
+has become known as CRB-G \cite{marshall_new_2017-1}. This biotype is highly invasive and is
 causing massive damage to coconut and oil palms in Papua New Guinea
 and the Solomon Islands. CRB-G has also invaded Oahu and Rota. Eradication
 attempts have been launched on these two islands.
@@ -92,7 +82,6 @@ Staff for this project currently comprises of only 2 people: the PI, Dr. Aubrey 
 
 
 
-\newpage
 \section{Bioassays to Detect Candidate Biocontrol Agents for CRB-G}
 
 
@@ -101,128 +90,99 @@ Staff for this project currently comprises of only 2 people: the PI, Dr. Aubrey 
 
 \subsection{Bioassay Results}
 
-Recent bioassay results are attached in Appendix \ref{recent-bioassay-results}.
+We have not yet found an OrNV isolate which shows promise as a biological control agent. Recent bioassay results are attached in Appendix \ref{recent-bioassay-results}.
 
-\subsection{CRB Rearing Facility}
+During laboratory bioassays, we dose CRB-G with samples of OrNV isloates, and observe mortality and changes in mass for one month. Each beetle is kept in isolation and individual records are stored in a laboratory information system (Section \ref{lims}).
 
-\subsection{Laboratory Information System}
+\subsection{CRB Rearing}
 
-\cite{moore_coconut_2019-1}
+Currently, experimental beetles are field-collected on Guam as prepupae, pupae or adults from breeding sites or as adults from pheromone traps.  Each beetle is given a serial number and is reared individually in a Mason jar stored in one of three environmental chambers set for 30 degrees Celsius, 80\% relative humidity and 12 hour photoperiod. Adult beetles are feed weekly with a slice of banana. 
+
+\subsection{Laboratory Information Management System}\label{lims}
+
+We have developed an online database which we are using as a laboratory information management system for maintaining individual records for our experiment beetles in our rearing program \cite{moore_coconut_2019-1}. This system was developed using the \href{http://www.web2py.com/}{web2py python web framework} and it is available on the web at \url{http://aubreymoore.pythonanywhere.com/rearing}. 
 
 \subsection{Acquisition of an OrNV isolate from Taiwan}
 
+During May 2019, Moore made a trip to Taiwan to receive 80 adult coconut rhinoceros
+beetles collected by Dr. Frank Hsu of the Taiwan Normal University. The Taiwan population is of special interest because specimens in a previous collection
+were all determined to be CRB-G and 82\% of these tested positive for OrNV \cite{watanabe_survey_2016-1}.
+
+Preliminary bioassays of virus isolated from this collection did not result in significant mortality. Beetle specimens and virus samples have been sent to AgResearch New Zealand for molecular analysis.
+
 \subsection{Acquisition of a Virus-Susceptible CRB Biotype for Comparative Bioassays}
+
+Since discovery of the CRB-G biotype on Guam \cite{marshall_new_2017-1}, we have been operating under the hypothesis that this biotype is significantly more tolerant (resistant) to pathogenic effects of OrNV isolates previously used as effective biocontrol agents for CRB invading Pacific Islands. It has also been hypothesized that CRB-G has different behavioral characteristics, such as a significantly reduced attraction to oryctalure. However, comparative laboratory bioassays have not been performed to test these hypotheses.
+
+We applied for and have been granted a USDA-APHIS import permit for live CRB which will allow us to establish a laboratory colony of CRB from presumed non-virus-resistant populations (See \cite{moore_additional_2019} and \cite{usda-aphis_crb_2019}). 
+
+We plan to import CRB from American Samoa and have already provide our collaborator, Dr. Mark Schmaedick at American Samoa Community College, with secure shipping containers we designed to facilitate secure transport of live CRB \cite{moore_container_2017-1}.
 
 \subsection{Laboratory Improvements}
 
-\begin{comment}
-
-\section{EXTRA}
-
-\subsection{Haemocoel Injection Bioassays}
-
-In this series of assays, we tested 4 islates of OrNV which had produced
-by an insect cell culture at the AgResearch Laboratory in New Zealand.
-Adult beetles were dosed by direct injection into the haemocoel. This
-series is a preliminary test for pathogenicity. Insignificant differences
-in mortality curves between virus treatment and the other two treatments
-(control treatment and heat-inactivated virus) is an indicator of
-pathogenicity. Gut tissue samples have been preserved for histology
-and molecular analysis.
-
-The following is a brief summary of results. Details are provided
-in the appended technical reports. Results indicate that isolates
-DUG42 and MALB are not pathogenic for CRB-G, but isolates PNG and
-V23B are pathogenic. Bioassays in which adult beetles are dosed \emph{per
-os} are underway and results will be available in a future report.
-
-\subsubsection{OrNV Isolate DUG42}
-
-Origin: Philippines; 2 replicates; 30 beetles in total
-
-No significant differences among mortality cuves. {[}control, heat-inactivated
-virus, virus{]}
-
-\subsubsection{OrNV Isolate MALB}
-
-Origin: Malaysia; 2 replicates; 30 beetles in total
-
-No significant differences among mortality curves. {[}control, heat-inactivated
-virus, virus{]}
-
-\subsubsection{OrNV Isolate PNG}
-
-Origin: Papua New Guinea; 4 replicates; 71 beetles in total
-
-Mortality curves in 2 significantly different groups: {[}control,
-heat-inactivated virus{]}, {[}virus{]}
-
-\subsubsection{OrNV Isolate V23B}
-
-Origin: Solomon Islands; 4 repicates; 66 beetles in total
-
-Mortality curves in 2 significantly different groups: {[}control,
-heat-inactivated virus{]}, {[}virus{]}
-
-\section{Environmental Cabinets and CRB Rearing}
-
-Three environmental cabinets which allow control of temperature, relative
-humidity, and lighting for insect rearing were procured and installed.
-These chambers are set to maintain 30\textdegree{}C, 80\% RH and
-12h photoperiod.
-
-After a power outage caused by a typhoon, one of the cabinets malfunctioned.
-It heated beyond the setpoint and killed all beetles. To prevent this
-problem from recurring, controllers for all three units have been
-programmed to send email to project staff whenever a fault is detected.
-
-The project does not currently rear beetles form egg to adult. Because
-CRB are so numerous on Guam, it is far more efficient to field collect
-prepupae, pupae and adults and rear these to the age required for
-bioassays. Adults are fed banana slices.
-
-\end{comment}
+Our current lack of molecular technology for detecting or quantifying OrNV is a major impediment to performing and interpreting bioassays. We have ordered laboratory equipment and supplies to remove this impediment. 
 
 
-\newpage
 \section{CRB Damage Survey}
 
 The objective of this component of the project is to develop an automated system to evaluate CRB damage by image analysis of roadside video surveys.  We have completed a \textit{proof of concept} trial in which a used deep learning to train an object detector which locates and counts dead and CRB-damaged coconut palms in video streams.  Visual results are presented in a YouTube post \cite{moore_training_2019} and technical details are available in an Open Science Framework Project \cite{moore_open_2019}.
 
+\section{Presentations and Outreach}
+
+\begin{itemize}
+	\item During Fall Term 2018, we did monthly presentations on coconut rhinoceros beetles and other insects for the Guam Head Start Program.
+	\item An oral presentation was made at the joint annual meetings of the Entomological Society of America and the Canadian Entomological Society, Vancouver: \\\\ \fullcite{moore_failed_2018-1}
+	\item An oral presentation and guided field work session was put together for the University of Guam Extension Internship Program: \\\\ \fullcite{moore_coconut_2019-2}	
+\end{itemize}
+
 \newpage
 \section{Regional Collaboration}
 
+An informal collaboration has been formed among Pacific-based entomologists working on the CRB-G problem. Scientists from Guam, Hawaii, Palau, Papua New Guinea, Solomon Islands, Fiji, Malaysia, Japan and New Zealand have met several times and future meetings are planned:
+\begin{itemize}
+	\item 2015 Pacific Entomology Conference, Honolulu, HI, USA
+	\item 2016 International Congress of Entomology, Orlando, USA
+	\item 2017 Japanese Society for Insect Pathology, Tokyo, Japan
+	\item 2018 Society for Invertebrate Pathology, Gold Coast, Australia
+	\item 2019 XIX International Plant Protection Congress (IPPC2019), India
+	\item 2020 (tentative): Pacific Plant Protection Organization, Guam	
+\end{itemize}
+
+Although individual institutions involved in finding a solution to the CRB-G problem
+have secured funding from multiple, short-term grants, we have been unsuccessful in
+finding funding to support a well-coordinated regional project. To facilitate informal
+communication and cooperation among members of the current \textit{ad hoc} group, we have
+spent some time and resources on developing the following resources.
+
 \subsection{Wiki Site}
 
-\cite{moore_crb-g_2019}
+During 2018, we built a private wiki intended to facilitate sharing technical information among those working to control CRB-G \cite{moore_crb-g_2019}. It is hoped that this site will be built and maintained by a community of users (ala Wikipedia).
 
 \subsection{Facebook Site}
 
-\cite{moore_facebook_2019}
-
-
+As an alternative to the wiki, we are launching a controlled-access Facebook site \cite{moore_facebook_2019}.
 
 \subsection{CRB Bibliography}
 
-A copy of the bibliography is provided in Appendix \ref{crb-bibliography}.
+This bibliography contains over 330 scientific journal articles, technical reports, and presentations about coconut rhinoceros beetle. A copy is provided in Appendix \ref{crb-bibliography}.
 
 \subsection{Online CRB Invasion History Map}
 
-\cite{moore_web_2019}
-
+Spread of CRB and CRB-G in the Pacific is being documented using an online, interactive map maintained by Moore \cite{moore_web_2019}. Recent potential geographical expansions include CRB (not the CRB-G biotype) in Vanuata, interception of CRB-G in New Caledonia, and discovery of a single CRB-? adult on Aguiguan Island, a small islanf near Tinian in the Commonwealth of the Northern Mariana Islands.
 
 \newpage
 \printbibliography
 
+\newpage
 \appendix
-%\appendixpage
+\appendixpage
 \addappheadtotoc
 
 \section{Recent Bioassay Results}\label{recent-bioassay-results}
 
-\fullcite{grasela_progress_2019}
 
-\newpage
+
+\fullcite{grasela_progress_2019}
 
 \section{Coconut Rhinoceros Beetle Bibliography}\label{crb-bibliography}
 
