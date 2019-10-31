@@ -15,6 +15,11 @@
  {hyperref}
 \hypersetup{linkcolor=blue,citecolor=blue,urlcolor=blue}
 
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{threeparttable}
+
 %\usepackage{pdfpages}
 %\usepackage{comment}
 
@@ -90,10 +95,72 @@ Staff for this project currently comprises of only 2 people: the PI, Dr. Aubrey 
 
 \subsection{Bioassay Results}
 
-We have not yet found an OrNV isolate which shows promise as a biological control agent. Recent bioassay results are attached in Appendix \ref{recent-bioassay-results}.
+Recent bioassay results are attached in Appendix \ref{recent-bioassay-results}.
+During laboratory bioassays, we dosed CRB-G with samples of OrNV isloates, and observe mortality and changes in mass for one month. Each beetle is kept in isolation and individual records are stored in a laboratory information system (Section \ref{lims}).
 
-During laboratory bioassays, we dose CRB-G with samples of OrNV isloates, and observe mortality and changes in mass for one month. Each beetle is kept in isolation and individual records are stored in a laboratory information system (Section \ref{lims}).
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{multirow}
+\begin{table}[h]
+	%\centering
+	\caption{Bioassay results summary.}
+	\begin{adjustbox}{width=\columnwidth,center}
+			
+	\begin{tabular}{ l l l c c r r r r }
+		\toprule
+		\textbf{OrNV}             & \textbf{bioassay}                               & \textbf{method\tnote{1}} & \textbf{beetles} & \textbf{replicates} & \multicolumn{1}{c}{\textbf{virus}}     & \multicolumn{1}{c}{\textbf{p}} & \multicolumn{1}{c}{\textbf{\textbf{heat}}} & \multicolumn{1}{c}{\textbf{p}} \\
+		\textbf{\textbf{isolate}} &                                                 &                 &                  &                     & \multicolumn{1}{c}{\textbf{mortality}} &                                & \multicolumn{1}{c}{\textbf{inactivated}}   &  \\
+		                          &                                                 &                 &                  &                     &                                        &                                & \multicolumn{1}{c}{\textbf{virus}}         &  \\
+		                          &                                                 &                 &                  &                     &                                        &                                & \multicolumn{1}{c}{\textbf{mortality}}     &  \\ \midrule
+		DUG42                     & DUG42\cite{moore_bioassay_2019}                 & injection       & 30               & 2                   & 40\%                                   & 0.65                           & 40\%                                       & 0.65                           \\ \midrule
+		\multirow{2}{*}{MALB}     & MALB\cite{moore_bioassay_2019-6}                & injection       & 30               & 2                   & 50\%                                   & 0.37                           & 0\%                                        & 1.00                           \\
+		                          & MALBperOS\cite{moore_bioassay_2019-7}           & per os          & 13               & 1                   & -60\%                                  & 1.00                           & 20\%                                       & 1.00                           \\ \midrule
+		\multirow{2}{*}{PNG}      & PNG\cite{moore_bioassay_2019-2}                 & injection       & 81               & 4                   & \textbf{90\%}                          & \textbf{0.00}                  & 5\%                                        & 1.00                           \\
+		                          & PNGperOS\cite{moore_bioassay_2019-9}            & per os          & 21               & 1                   & 0\%                                    & 1.00                           & 0\%                                        & 1.00                           \\ \midrule
+		\multirow{4}{*}{V23B}     & V23B\cite{moore_bioassay_2019-3}                & injection       & 66               & 4                   & \textbf{88\%}                          & \textbf{0.00}                  & 0\%                                        & 1.00                           \\
+		                          & V23BperOS\cite{moore_bioassay_2019-5}           & per os          & 32               & 2                   & 80\%                                   & 0.07                           & 20\%                                       & 0.69                           \\
+		                          & V23-large\_bioassay\cite{moore_bioassay_2019-4} & per os          & 53               & 1                   & \textbf{42\%}                          & \textbf{0.00}                  & -                                          & -                              \\
+		                          & V23\_perOSIN\cite{moore_bioassay_2019-1}        & per os          & 16               & 1                   & 60\%                                   & 0.06                           & -                                          & -                              \\ \bottomrule
+	\end{tabular}
 
+	\end{adjustbox}
+\end{table}
+
+\begin{comment}
+
+\clearpage
+\begin{table}
+	\begin{threeparttable}
+		\caption{Sample ANOVA table}
+		\begin{tabular}{lllll}
+			\toprule
+			Stubhead & \( df \) & \( f \) & \( \eta \) & \( p \) \\
+			\midrule
+			&     \multicolumn{4}{c}{Spanning text}     \\
+			Row 1    & 1        & 0.67    & 0.55       & 0.41    \\
+			Row 2    & 2        & 0.02    & 0.01       & 0.39    \\
+			Row 3    & 3        & 0.15    & 0.33       & 0.34    \\
+			Row 4    & 4        & 1.00    & 0.76       & 0.54    \\
+			\bottomrule
+		\end{tabular}
+		\begin{tablenotes}
+			\small
+			\item This is where authors provide additional information about
+			the data, including whatever notes are needed.
+		\end{tablenotes}
+	\end{threeparttable}
+\end{table}
+
+\end{comment}
+
+
+
+
+
+
+
+
+\clearpage
 \subsection{CRB Rearing}
 
 Currently, experimental beetles are field-collected on Guam as prepupae, pupae or adults from breeding sites or as adults from pheromone traps.  Each beetle is given a serial number and is reared individually in a Mason jar stored in one of three environmental chambers set for 30 degrees Celsius, 80\% relative humidity and 12 hour photoperiod. Adult beetles are feed weekly with a slice of banana. 
@@ -180,9 +247,23 @@ Spread of CRB and CRB-G in the Pacific is being documented using an online, inte
 
 \section{Recent Bioassay Results}\label{recent-bioassay-results}
 
+\fullcite{moore_bioassay_2019}
 
+\fullcite{moore_bioassay_2019-1}
 
-\fullcite{grasela_progress_2019}
+\fullcite{moore_bioassay_2019-2}
+
+\fullcite{moore_bioassay_2019-3}
+
+\fullcite{moore_bioassay_2019-4}
+
+\fullcite{moore_bioassay_2019-5}
+
+\fullcite{moore_bioassay_2019-6}
+
+\fullcite{moore_bioassay_2019-7}
+
+\fullcite{moore_bioassay_2019-9}
 
 \section{Coconut Rhinoceros Beetle Bibliography}\label{crb-bibliography}
 
