@@ -19,9 +19,7 @@
 \usepackage{multirow}
 \usepackage{adjustbox}
 \usepackage{threeparttable}
-
-%\usepackage{pdfpages}
-%\usepackage{comment}
+\usepackage[table]{xcolor}
 
 \usepackage[backend=biber,maxbibnames=99]{biblatex}
 \usepackage{csquotes}
@@ -48,9 +46,27 @@ Performance Period: August 1, 2017 - July 31, 2019}
 \end{center}
 
 \newpage
+\section*{In a Nut Shell}
+
+\fcolorbox{black}{lightgray}{
+	\begin{minipage}{\textwidth}
+		\begin{itemize}
+			
+			\item The primary objective of this project was to find an isolate of \textit{Oryctes rhinoceros} nudivirus (OrNV) which can be used as an effective biological control agent for CRB-G biotype of coconut rhinoceros beetle (CRB). Laboratory bioassays of four isolates indicated that OrNV isolate V23B is pathogenic for CRB-G and a potential biocontrol agent for this pest.
+			
+			\item A secondary objective of this project was to develop a CRB damage monitoring system. A digital image analysis system was developed to detect and quantify V-shaped cuts to fronds and coconut palm mortality caused by CRB. The heart of this system is an object detector, trained by deep learning technology, which locates CRB damage symptoms on frames from georeferenced roadside video surveys. This object detector will be used to automate detection, quantification and to map changes in CRB damage over time and space.
+			
+			\item Uncontrolled outbreaks of CRB-G is a major problem for Pacific islands. This pest is causing major damage to the oil palm plantations in Papua New Guinea and to coconut plantations in the Solomon Islands....
+			
+	\end{itemize}
+	\end{minipage}
+}
+
+\newpage
 \tableofcontents{}
 
 \newpage
+
 \section{Background}
 
 The major goal of this project is to find an effective biological
@@ -68,10 +84,6 @@ attempts have been launched on these two islands.
 
 Additional goals for this project are to establish a CRB damage survey to evaluate efficacy of biocontrol and other tactics, and to maintain and facilitate collaboration with other Pacific island entomologists working to find solutions for CRB-G management.
 
-
-
-
-
 \section{Staffing}
 
 Staff for this project currently comprises of only 2 people: the PI, Dr. Aubrey Moore, and a post-doc, Dr. James Grasela.
@@ -84,14 +96,7 @@ Staff for this project currently comprises of only 2 people: the PI, Dr. Aubrey 
 \end{itemize}
 
 
-
-
-
 \section{Bioassays to Detect Candidate Biocontrol Agents for CRB-G}
-
-
-
-
 
 \subsection{Bioassay Results}
 
@@ -102,27 +107,36 @@ During laboratory bioassays, we dosed CRB-G with samples of OrNV isloates, and o
 % \usepackage{booktabs}
 % \usepackage{multirow}
 \begin{table}[h]
-	%\centering
-	\caption{Bioassay results summary.}
-	\begin{adjustbox}{width=\columnwidth,center}
+		\begin{adjustbox}{width=\columnwidth,center}
 			
-	\begin{tabular}{ l l l c c r r r r }
+	 	\begin{threeparttable} 
+	\caption{\textit{Oryctes rhinoceros} nudivirus (OrNV) bioassay results summary.}
+	 		
+			
+	\begin{tabular}{ l l l c c c c }
 		\toprule
-		\textbf{OrNV}             & \textbf{bioassay}                               & \textbf{method\tnote{1}} & \textbf{beetles} & \textbf{replicates} & \multicolumn{1}{c}{\textbf{virus}}     & \multicolumn{1}{c}{\textbf{p}} & \multicolumn{1}{c}{\textbf{\textbf{heat}}} & \multicolumn{1}{c}{\textbf{p}} \\
-		\textbf{\textbf{isolate}} &                                                 &                 &                  &                     & \multicolumn{1}{c}{\textbf{mortality}} &                                & \multicolumn{1}{c}{\textbf{inactivated}}   &  \\
-		                          &                                                 &                 &                  &                     &                                        &                                & \multicolumn{1}{c}{\textbf{virus}}         &  \\
-		                          &                                                 &                 &                  &                     &                                        &                                & \multicolumn{1}{c}{\textbf{mortality}}     &  \\ \midrule
-		DUG42                     & DUG42\cite{moore_bioassay_2019}                 & injection       & 30               & 2                   & 40\%                                   & 0.65                           & 40\%                                       & 0.65                           \\ \midrule
-		\multirow{2}{*}{MALB}     & MALB\cite{moore_bioassay_2019-6}                & injection       & 30               & 2                   & 50\%                                   & 0.37                           & 0\%                                        & 1.00                           \\
-		                          & MALBperOS\cite{moore_bioassay_2019-7}           & per os          & 13               & 1                   & -60\%                                  & 1.00                           & 20\%                                       & 1.00                           \\ \midrule
-		\multirow{2}{*}{PNG}      & PNG\cite{moore_bioassay_2019-2}                 & injection       & 81               & 4                   & \textbf{90\%}                          & \textbf{0.00}                  & 5\%                                        & 1.00                           \\
-		                          & PNGperOS\cite{moore_bioassay_2019-9}            & per os          & 21               & 1                   & 0\%                                    & 1.00                           & 0\%                                        & 1.00                           \\ \midrule
-		\multirow{4}{*}{V23B}     & V23B\cite{moore_bioassay_2019-3}                & injection       & 66               & 4                   & \textbf{88\%}                          & \textbf{0.00}                  & 0\%                                        & 1.00                           \\
-		                          & V23BperOS\cite{moore_bioassay_2019-5}           & per os          & 32               & 2                   & 80\%                                   & 0.07                           & 20\%                                       & 0.69                           \\
-		                          & V23-large\_bioassay\cite{moore_bioassay_2019-4} & per os          & 53               & 1                   & \textbf{42\%}                          & \textbf{0.00}                  & -                                          & -                              \\
-		                          & V23\_perOSIN\cite{moore_bioassay_2019-1}        & per os          & 16               & 1                   & 60\%                                   & 0.06                           & -                                          & -                              \\ \bottomrule
+		OrNV                  & bioassay                                        & method\tnote{1} & beetles & replicates & virus                           & inactivated                     \\
+		isolate               &                                                 &                 &         &            & mortality (\textit{p})\tnote{2} & virus                           \\
+		                      &                                                 &                 &         &            &                                 & mortality (\textit{p})\tnote{3} \\ \bottomrule
+		DUG42                 & DUG42\cite{moore_bioassay_2019}                 & injection       & 30      & 2          & 40\% (0.65)                     & 40\% (0.65)                     \\ \midrule
+		\multirow{2}{*}{MALB} & MALB\cite{moore_bioassay_2019-6}                & injection       & 30      & 2          & 50\% (0.37)                     & \hphantom{0}0\% (1.00)          \\
+		                      & MALBperOS\cite{moore_bioassay_2019-7}           & per os          & 13      & 1          & -60\% (1.00)                    & 20\% (1.00)                     \\ \midrule
+		\multirow{2}{*}{PNG}  & PNG\cite{moore_bioassay_2019-2}                 & injection       & 81      & 4          & \cellcolor{yellow}{90\% (0.00)} & \hphantom{0}5\% (1.00)          \\
+		                      & PNGperOS\cite{moore_bioassay_2019-9}            & per os          & 21      & 1          & \hphantom{0}0\% (1.00)          & \hphantom{0} 0\% (1.00)         \\ \midrule
+		\multirow{4}{*}{V23B} & V23B\cite{moore_bioassay_2019-3}                & injection       & 66      & 4          & \cellcolor{yellow}{88\% (0.00)} & \hphantom{0}0\% (1.00)          \\
+		                      & V23BperOS\cite{moore_bioassay_2019-5}           & per os          & 32      & 2          & 80\% (0.07)                     & 20\% (0.69)                     \\
+		                      & V23-large\_bioassay\cite{moore_bioassay_2019-4} & per os          & 53      & 1          & \cellcolor{yellow}{42\% (0.00)} & -                               \\
+		                      & V23\_perOSIN\cite{moore_bioassay_2019-1}        & per os          & 16      & 1          & 60\% (0.06)                     & -                               \\ \bottomrule
 	\end{tabular}
-
+	\begin{tablenotes}[para]
+		\item[1] Adult beetles were dosed either by direct injection of virus suspension into the haemocoel or by applying a droplet containing virus to mouthparts. \\ 
+		\item[2] Percent mortality in beetles treated with virus, adjusted for untreated control mortality; 
+		number in parentheses is the \textit{p}-value resulting from a Fisher's exact test of significant difference between mortality of treated and untreated beetles. \\
+		\item[3] Percent mortality in beetles treated with heat inactivated virus, adjusted for untreated control mortality; 
+		number in parentheses is the \textit{p}-value resulting from a Fisher's exact test of significant difference between mortality of treated and untreated beetles. 
+	\end{tablenotes}
+	 		
+\end{threeparttable}
 	\end{adjustbox}
 \end{table}
 
